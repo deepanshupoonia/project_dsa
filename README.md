@@ -2,12 +2,10 @@ Multimedia Content Library
 
 Team Members
 
-Lavudya Sai Mani Chaitanya - 2023CSB1133
-Deepanshu Poonia - 2023CSB1117
-Aman Sinam - 2023CSB1098
-Mentoring TA
-
-Deepu Yadav
+Lavudya Sai Mani Chaitanya - 2023CSB1133,
+Deepanshu Poonia - 2023CSB1117,
+Aman Sinam - 2023CSB1098,
+Mentoring TA-Deepu Yadav.
 This project is a C++ implementation of a multimedia content library that enables users to store, search, and delete multimedia content items based on spatial bounding boxes. The library uses an R-Tree data structure to efficiently handle spatial queries, making it suitable for applications involving geospatial data or multimedia with spatial coordinates.
 
 Table of Contents
