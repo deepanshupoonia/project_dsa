@@ -5,17 +5,17 @@ This project is a C++ implementation of a multimedia content library, enabling u
 Table of Contents
 
 Features
-Project Structure
-Requirements
-Getting Started
-Usage
-Adding Content
-Searching Content
-Deleting Content
-Expected Outputs
-File Structure
-Notes
-Features
+Project Structure,
+Requirements,
+Getting Started,
+Usage,
+Adding Content,
+Searching Content,
+Deleting Content,
+Expected Outputs,
+File Structure,
+Notes,
+Features.
 
 R-Tree Data Structure: Efficient storage and querying of multimedia content based on spatial bounding boxes.
 CSV Persistence: Stores multimedia content in a CSV file, enabling content persistence across sessions.
