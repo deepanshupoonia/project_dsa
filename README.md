@@ -1,10 +1,18 @@
 Multimedia Content Library
 
-This project is a C++ implementation of a multimedia content library, enabling users to store, search, and delete multimedia content items based on spatial bounding boxes. The library uses an R-Tree data structure to efficiently handle spatial queries, making it suitable for applications involving geospatial data or multimedia with spatial coordinates.
+Team Members
+
+Lavudya Sai Mani Chaitanya - 2023CSB1133
+Deepanshu Poonia - 2023CSB1117
+Aman Sinam - 2023CSB1098
+Mentoring TA
+
+Deepu Yadav
+This project is a C++ implementation of a multimedia content library that enables users to store, search, and delete multimedia content items based on spatial bounding boxes. The library uses an R-Tree data structure to efficiently handle spatial queries, making it suitable for applications involving geospatial data or multimedia with spatial coordinates.
 
 Table of Contents
 
-Features
+Features,
 Project Structure,
 Requirements,
 Getting Started,
@@ -20,105 +28,66 @@ Features.
 R-Tree Data Structure: Efficient storage and querying of multimedia content based on spatial bounding boxes.
 CSV Persistence: Stores multimedia content in a CSV file, enabling content persistence across sessions.
 Add, Search, and Delete Functionality: Supports adding new content, searching by bounding box, and deleting content.
-Multi-user Support: Users can log in or create accounts, with content stored separately for each user.
 Project Structure
 
-Main Code: main.cpp - Contains the R-Tree implementation and user interface logic.
-Data File: users_content.csv - CSV file storing multimedia content for all users.
+This project has the following core components:
+
+R-Tree Implementation: Provides efficient handling of spatial bounding boxes for multimedia items.
+Multimedia Content Library: Core library for managing multimedia items, including adding, searching, and deleting content.
+CSV Data Storage: Handles loading and saving data to a CSV file to ensure data persistence across sessions.
 Requirements
 
-Compiler: A C++ compiler that supports C++11 or later (e.g., g++).
-Libraries: No external libraries are required. The project uses standard C++ libraries.
+C++ compiler (supporting C++11 or higher)
+Standard C++ libraries
+CSV file (for data persistence)
 Getting Started
 
-Clone or Download the project repository to your local machine.
-Compile the Code:
+Clone the repository:
 bash
 Copy code
-g++ main.cpp -o multimedia_content_library
-Run the Executable:
+git clone https://github.com/your-username/multimedia-content-library.git
+Compile the code:
 bash
 Copy code
-./multimedia_content_library
+g++ main.cpp -o multimedia_library
+Run the executable:
+bash
+Copy code
+./multimedia_library
 Usage
 
-Upon running the program, you will be prompted to log in or create a new account. Follow these steps:
-
-1. Log In or Create a New User
-Enter your username. If you are a new user, type new to create an account.
-If you choose new, you will be asked to enter a username. This username is used to organize content uniquely for each user.
-2. Main Menu
-After logging in, the main menu provides the following options:
-
-plaintext
-Copy code
-Select an option:
-1. Add new content
-2. Search content by bounding box
-3. Delete content by bounding box
-4. Exit
 Adding Content
-Option: 1
-Input Details:
-ID: A unique integer identifier for the content.
-Title: A string representing the title of the multimedia content.
-Tags: Tags or keywords describing the content (comma-separated).
-Bounding Box: Coordinates in the format xmin ymin xmax ymax (representing spatial boundaries).
-Expected Output: A success message, and the content will be saved in the users_content.csv file.
-Example:
-
-plaintext
-Copy code
-Enter content ID: 101
-Enter title: Sunset Photo
-Enter tags (comma-separated): nature, sunset, beach
-Enter bounding box coordinates (xmin ymin xmax ymax): 10 20 30 40
+Input: Specify the content's ID, name, type, and bounding box coordinates.
+Expected Result: The content item will be added to the R-Tree structure and saved in the CSV file.
 Searching Content
-Option: 2
-Input Details:
-Bounding Box: Coordinates in the format xmin ymin xmax ymax for searching.
-Expected Output: The program will create a text file named <username>_search_result.txt containing the details of all multimedia content that matches the specified bounding box.
-Example:
-
-plaintext
-Copy code
-Enter bounding box coordinates to search (xmin ymin xmax ymax): 10 20 30 40
-Expected File Output (<username>_search_result.txt):
-plaintext
-Copy code
-ID: 101, Title: Sunset Photo, Tags: nature, sunset, beach, Bounding Box: [10, 20, 30, 40]
+Input: Enter bounding box coordinates to search within.
+Expected Result: Returns a list of content items that intersect with the specified bounding box.
 Deleting Content
-Option: 3
-Input Details:
-Bounding Box: Coordinates in the format xmin ymin xmax ymax to specify content for deletion.
-Expected Output: A success message confirming deletion, and the users_content.csv file will be updated accordingly.
-Example:
-
-plaintext
-Copy code
-Enter bounding box coordinates to delete (xmin ymin xmax ymax): 10 20 30 40
-Expected Output:
-plaintext
-Copy code
-Content deleted successfully.
+Input: Provide the ID of the content you wish to delete.
+Expected Result: The content item is removed from both the R-Tree structure and the CSV file.
 Expected Outputs
 
-Adding Content: "Content added successfully."
-Search Results: Results saved to a text file (e.g., username_search_result.txt).
-Deleting Content: "Content deleted successfully."
+Add Content: Confirmation message showing that the item has been added.
+Search Content: List of content items within the search area.
+Delete Content: Confirmation message that the item has been deleted.
 File Structure
 
-users_content.csv: Contains multimedia content for each user in the format:
-csv
-Copy code
-username,id,title,tags,xmin,ymin,xmax,ymax
-<username>_search_result.txt: Search results file, created per user based on search queries.
+main.cpp - The main executable file.
+rtree.h - R-Tree implementation header file.
+content_library.cpp - Contains functions for adding, searching, and deleting content.
+content.csv - CSV file used for storing content data.
 Notes
 
-CSV Persistence: The users_content.csv file will be updated every time content is added or deleted.
-Data Consistency: Ensure unique IDs for each multimedia content item within a user's account.
-Bounding Box Format: Maintain consistent format xmin ymin xmax ymax for all spatial data.
-This README should provide clear guidance on how to use your multimedia content library, making it easy for others to understand and utilize your project.
+Make sure the content.csv file exists in the same directory as the executable.
+Proper error handling is included, but ensure valid inputs for optimal functionality.
+This README provides a comprehensive overview of the Multimedia Content Library, including setup, usage, and expected results.
+
+
+
+
+
+
+
 
 
 
