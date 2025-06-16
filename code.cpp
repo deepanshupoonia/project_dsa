@@ -1,8 +1,7 @@
 //MULTIMEDIA CONTENT LIBRARY
 //The project is about creating a multimedia content library that allows users to add, search, and delete multimedia content based on a spatial bounding box.
 //The project uses an R-Tree data structure to store multimedia content and perform spatial queries. 
-// PROJECT GROUP MEMBERS:
-// TEACHING ASSISTANT: DEEPU YADAV
+
 #include <iostream>
 #include <fstream>
 #include <string>
