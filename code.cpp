@@ -1,11 +1,6 @@
-// DSA PROJECT: MULTIMEDIA CONTENT LIBRARY
+//MULTIMEDIA CONTENT LIBRARY
 // The project is about creating a multimedia content library that allows users to add, search, and delete multimedia content based on a spatial bounding box.
 //The project uses an R-Tree data structure to store multimedia content and perform spatial queries. 
-// PROJECT GROUP MEMBERS:
-// 1.LAVUDYA SAI MANI CHAITANYA- 2023CSB1133
-// 2.DEEPANSHU POONIA- 2023CSB1117
-// 3.AMAN SINAM- 2023CSB1098 
-// TEACHING ASSISTANT: DEEPU YADAV
 #include <iostream>
 #include <fstream>
 #include <string>
