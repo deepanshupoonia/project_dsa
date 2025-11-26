@@ -400,6 +400,11 @@ int main() {
             string title, tags;
             float xmin, ymin, xmax, ymax;
 // Prompt for content details
+            size_t h = std::hash<std::string>{}(title);
+            float xmin = h % 10000;
+            float ymin = (h >> 16) % 10000;
+            float xmax = xmin + 1;  // small rectangle
+            float ymax = ymin + 1;
             cout << "Enter content ID: ";
             cin >> id;
             cout << "Enter title: ";
